@@ -1,0 +1,509 @@
+[
+    {
+        "id": "b533c34.99a1b4",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "e809b8f0.100098",
+        "type": "mqtt-broker",
+        "name": "test",
+        "broker": "ws://test.mosquitto.org:8080",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "compatmode": false,
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": ""
+    },
+    {
+        "id": "62df0b3a.356524",
+        "type": "mqtt-broker",
+        "name": "mqtt for nodeJS",
+        "broker": "34.96.202.94",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "compatmode": false,
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": ""
+    },
+    {
+        "id": "998cad71.b93bc",
+        "type": "mqtt-broker",
+        "name": "newTest",
+        "broker": "",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "compatmode": false,
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": ""
+    },
+    {
+        "id": "3a4a22aa.ae27fe",
+        "type": "mqtt in",
+        "z": "b533c34.99a1b4",
+        "name": "get Temp (MQTT)",
+        "topic": "temp",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "e809b8f0.100098",
+        "x": 200,
+        "y": 200,
+        "wires": [
+            [
+                "97cfe9d4.534208"
+            ]
+        ]
+    },
+    {
+        "id": "97cfe9d4.534208",
+        "type": "debug",
+        "z": "b533c34.99a1b4",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 390,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "67e42890.580bc8",
+        "type": "mqtt out",
+        "z": "b533c34.99a1b4",
+        "name": "sentMqtt",
+        "topic": "temp",
+        "qos": "0",
+        "retain": "true",
+        "broker": "e809b8f0.100098",
+        "x": 580,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "850c3792.2980e8",
+        "type": "inject",
+        "z": "b533c34.99a1b4",
+        "name": "push temp",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 180,
+        "y": 300,
+        "wires": [
+            [
+                "a64f5764.238008"
+            ]
+        ]
+    },
+    {
+        "id": "dbe455fe.8b1698",
+        "type": "mqtt in",
+        "z": "b533c34.99a1b4",
+        "name": "get Voltage (MQTT)",
+        "topic": "voltage",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "e809b8f0.100098",
+        "x": 630,
+        "y": 200,
+        "wires": [
+            [
+                "fdef8e96.3a8c4"
+            ]
+        ]
+    },
+    {
+        "id": "fdef8e96.3a8c4",
+        "type": "debug",
+        "z": "b533c34.99a1b4",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 830,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "bec1120d.53434",
+        "type": "mqtt out",
+        "z": "b533c34.99a1b4",
+        "name": "sentMqtt",
+        "topic": "voltage",
+        "qos": "0",
+        "retain": "true",
+        "broker": "e809b8f0.100098",
+        "x": 1160,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "f4744c20.42fba",
+        "type": "inject",
+        "z": "b533c34.99a1b4",
+        "name": "push voltage",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 770,
+        "y": 300,
+        "wires": [
+            [
+                "649dd747.4cb148"
+            ]
+        ]
+    },
+    {
+        "id": "95e815bf.24f5c8",
+        "type": "debug",
+        "z": "b533c34.99a1b4",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1170,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "649dd747.4cb148",
+        "type": "function",
+        "z": "b533c34.99a1b4",
+        "name": "random voltage",
+        "func": "rnd = Math.round(Math.random()*100);\nmsg.payload = `{\"voltage\":\"${rnd}\"}`;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 960,
+        "y": 300,
+        "wires": [
+            [
+                "bec1120d.53434",
+                "95e815bf.24f5c8"
+            ]
+        ]
+    },
+    {
+        "id": "a64f5764.238008",
+        "type": "function",
+        "z": "b533c34.99a1b4",
+        "name": "random temp",
+        "func": "rnd = Math.round(Math.random()*100);\nmsg.payload = `{\"temp\":\"${rnd}\"}`;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 370,
+        "y": 300,
+        "wires": [
+            [
+                "67e42890.580bc8",
+                "93e2896e.350d18"
+            ]
+        ]
+    },
+    {
+        "id": "93e2896e.350d18",
+        "type": "debug",
+        "z": "b533c34.99a1b4",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 570,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "360f86e2.bcba4a",
+        "type": "mqtt in",
+        "z": "b533c34.99a1b4",
+        "name": "get Control (MQTT)",
+        "topic": "control",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "e809b8f0.100098",
+        "x": 1050,
+        "y": 200,
+        "wires": [
+            [
+                "92f955f7.dd8008"
+            ]
+        ]
+    },
+    {
+        "id": "92f955f7.dd8008",
+        "type": "debug",
+        "z": "b533c34.99a1b4",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1250,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "1fdd1dea.ff3cc2",
+        "type": "inject",
+        "z": "b533c34.99a1b4",
+        "name": "nodeJS push temp",
+        "props": [],
+        "repeat": "1",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 220,
+        "y": 600,
+        "wires": [
+            [
+                "60b7876d.407728"
+            ]
+        ]
+    },
+    {
+        "id": "60b7876d.407728",
+        "type": "function",
+        "z": "b533c34.99a1b4",
+        "name": "random temp",
+        "func": "rnd = Math.round(Math.random()*100);\nmsg.payload = `{\"temp\":\"${rnd}\"}`;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 410,
+        "y": 600,
+        "wires": [
+            [
+                "d87a13ac.d4a8d",
+                "cc3cd688.0ee3f8"
+            ]
+        ]
+    },
+    {
+        "id": "d87a13ac.d4a8d",
+        "type": "mqtt out",
+        "z": "b533c34.99a1b4",
+        "name": "sentMqtt",
+        "topic": "temp",
+        "qos": "0",
+        "retain": "true",
+        "broker": "62df0b3a.356524",
+        "x": 580,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "cc3cd688.0ee3f8",
+        "type": "debug",
+        "z": "b533c34.99a1b4",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 590,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "bd723b25.d3a478",
+        "type": "mqtt out",
+        "z": "b533c34.99a1b4",
+        "name": "sentMqtt",
+        "topic": "voltage",
+        "qos": "0",
+        "retain": "true",
+        "broker": "62df0b3a.356524",
+        "x": 1200,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "d398d4c.4169628",
+        "type": "inject",
+        "z": "b533c34.99a1b4",
+        "name": "nodeJS push voltage",
+        "props": [],
+        "repeat": "1",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 820,
+        "y": 600,
+        "wires": [
+            [
+                "f7b8f94e.ff5e58"
+            ]
+        ]
+    },
+    {
+        "id": "5dfad7dc.047848",
+        "type": "debug",
+        "z": "b533c34.99a1b4",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1210,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "f7b8f94e.ff5e58",
+        "type": "function",
+        "z": "b533c34.99a1b4",
+        "name": "random voltage",
+        "func": "rnd = Math.round(Math.random()*100);\nmsg.payload = `{\"voltage\":\"${rnd}\"}`;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 1020,
+        "y": 600,
+        "wires": [
+            [
+                "bd723b25.d3a478",
+                "5dfad7dc.047848"
+            ]
+        ]
+    },
+    {
+        "id": "6d6b9c20.956474",
+        "type": "mqtt in",
+        "z": "b533c34.99a1b4",
+        "name": "nodeJS get Temp (MQTT)",
+        "topic": "temp",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "62df0b3a.356524",
+        "x": 210,
+        "y": 800,
+        "wires": [
+            [
+                "719171da.02148"
+            ]
+        ]
+    },
+    {
+        "id": "719171da.02148",
+        "type": "debug",
+        "z": "b533c34.99a1b4",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 430,
+        "y": 800,
+        "wires": []
+    },
+    {
+        "id": "813ee38b.1ff48",
+        "type": "mqtt in",
+        "z": "b533c34.99a1b4",
+        "name": "nodeJS get Control (MQTT)",
+        "topic": "control",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "62df0b3a.356524",
+        "x": 680,
+        "y": 800,
+        "wires": [
+            [
+                "fc4b498.fb8b4b8"
+            ]
+        ]
+    },
+    {
+        "id": "fc4b498.fb8b4b8",
+        "type": "debug",
+        "z": "b533c34.99a1b4",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 890,
+        "y": 800,
+        "wires": []
+    }
+]

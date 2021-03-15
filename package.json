@@ -1,0 +1,12 @@
+{
+    "name": "nodered-mqtt",
+    "description": "A Node-RED Project",
+    "version": "0.0.1",
+    "dependencies": {},
+    "node-red": {
+        "settings": {
+            "flowFile": "nodered-mqtt.json",
+            "credentialsFile": "nodered-mqtt_cred.json"
+        }
+    }
+}
