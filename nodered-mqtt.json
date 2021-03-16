@@ -507,30 +507,13 @@
         "wires": []
     },
     {
-        "id": "df6e4868.5456d8",
-        "type": "inject",
+        "id": "ef10c310.401f3",
+        "type": "comment",
         "z": "b533c34.99a1b4",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "1",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 240,
-        "y": 120,
-        "wires": [
-            []
-        ]
+        "name": "ทดสอบ",
+        "info": "",
+        "x": 170,
+        "y": 140,
+        "wires": []
     }
 ]

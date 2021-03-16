@@ -520,14 +520,14 @@
                 "vt": "str"
             }
         ],
-        "repeat": "",
+        "repeat": "1",
         "crontab": "",
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 230,
+        "x": 240,
         "y": 120,
         "wires": [
             []
